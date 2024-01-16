@@ -13,8 +13,7 @@ my_first_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.co
 #streamlit.dataframe(my_first_list)
 
 #Choose the Fruit Name Column as the Index
-my_fruit_list = my_fruit_list.set_index('Fruit')
-
+my_first_list = my_first_list.set_index('Fruit')
 
 # Let's put a pick list here so they can pick the fruit they want to include 
 streamlit.multiselect ("Pick some fruits:", list(my_first_list.index))

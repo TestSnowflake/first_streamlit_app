@@ -22,9 +22,6 @@ fruits_To_Show= my_fruit_list.loc[fruits_selected]
 #Display the table on the page
 streamlit.dataframe(fruits_To_Show)
 
-
-# write your own comment -what does the next line do? 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# write your own comment - what does this do?
-streamlit.dataframe(fruityvice_normalized) 
+streamlit.dataframe(fruityvice_normalized)
 

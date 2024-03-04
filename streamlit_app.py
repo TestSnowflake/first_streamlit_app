@@ -1,5 +1,6 @@
 import streamlit
 import pandas
+import requets
 streamlit.title('My Mom s New Healthy Diner')
 streamlit.header('Breakfast Favorites')
 streamlit.text( '🥣 Omega 3 & Blueberry Oatmeal')
@@ -22,6 +23,8 @@ fruits_To_Show= my_fruit_list.loc[fruits_selected]
 #Display the table on the page
 streamlit.dataframe(fruits_To_Show)
 
+ruityvice_response= requests.get("https://fruityvice/api/fruit/watermelon")
+streamlit.text(fruityvice_response.json())
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
